@@ -14,7 +14,7 @@ library(tidyverse)
 library(viridis)
 library(RColorBrewer)
 
-#ENASeq analysis code modified from https://git.embl.org/musser/profiling-cellular-diversity-in-sponges-informs-animal-cell-type-and-nervous-system-evolution/-/tree/master/single_cell_analysis/data  
+#RNASeq analysis code modified from https://git.embl.org/musser/profiling-cellular-diversity-in-sponges-informs-animal-cell-type-and-nervous-system-evolution/-/tree/master/single_cell_analysis/data  
 
 #import 10x matrix and sample metadata
 sl_count_matrix <- read.delim(file = "/GSE134912_spongilla_10x_count_matrix.txt") #obtained from https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE134912  
