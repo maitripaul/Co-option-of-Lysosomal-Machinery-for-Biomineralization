@@ -7,8 +7,8 @@ date: "2026-01-15"
 ```{r}
 
 ## Libraries
-library(Seurat)  #ver 2.3.4
-library(dplyr)  #ver 0.8.1
+library(Seurat)  
+library(dplyr)  
 library(ggplot2)
 library(tidyverse)
 library(viridis)
@@ -30,7 +30,8 @@ Idents(sl) <- "cell_type"  # Set cell type as the active identity
 sl <- NormalizeData(sl)
 sl <- FindVariableFeatures(sl)
 
-#plotting genes that were manually selected due to links to lysosomal function from sclerocyte markers (log2 fold change > 1, percentage expression in cell type > 25%; logfc.threshold = 1, min.pct = 0.25)
+# Plotting genes that were manually selected due to links to lysosomal function from sclerocyte markers with thresholds of log2 fold change > 1, and percentage expression in cell type > 25%; Seurat command used for sclerocyte markers: FindMarkers(sl, ident.1 = "Sclerocytes",logfc.threshold = 1, min.pct = 0.25)
+
 DE_genes_lysosomal_sclerocyte <- read.csv("/Users/maitripaul/Dropbox/Tresguerres_lab/sponge_project/Supplementary_files/DE_sclerocyte_genes_logfold1_lysosomal_S_lacustris.csv")
 
 genes_of_interest <- DE_genes_lysosomal_sclerocyte$gene_id
